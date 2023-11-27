@@ -1,0 +1,43 @@
+//pt font
+@import url('https://fonts.cdnfonts.com/css/pt-sans-2');
+
+/* The following line can be included in a src/App.scss */
+@import '~bootstrap/scss/bootstrap';
+/* The following line can be included in a src/App.scss */
+@import './variables';
+
+
+
+html {
+    font-size: 62.5%;
+}
+
+
+
+body {
+    background-color: rgb(151, 153, 153);
+    color: white;
+    font-size: $fontSize;
+    font-family: 'PT Sans', sans-serif;
+    line-height: $lineHeight;
+    word-spacing: .2rem;
+}
+
+//reset css
+a {
+    transition: all .3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+        color:$primary !important;
+        text-decoration: none;
+    }
+}
+
+main {
+    height: 60vh;
+}
+
+@import './header';
+@import './sideBar';
+@import './main';

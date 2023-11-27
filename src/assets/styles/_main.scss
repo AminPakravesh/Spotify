@@ -1,0 +1,65 @@
+@keyframes active-music-animate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(-360deg);
+    }
+}
+
+main {
+    max-height: 60vh;
+
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+
+    &::-webkit-scrollbar-track {
+        width: 10px;
+        background-color: $gray;
+        border-radius: 2rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        width: 10px;
+        background-color: $primary;
+        border-radius: 2rem;
+    }
+
+
+
+
+    .music-item {
+        position: relative;
+
+        .active {
+            animation: active-music-animate 5s infinite linear;
+            transition: all .3s;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            background: linear-gradient(90deg, (green, pink));
+            height: 4px;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+        }
+
+        .music-cover {
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        .music-desc {
+            flex: 1;
+        }
+    }
+
+}
